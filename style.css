@@ -6,6 +6,9 @@ body {
   font-size: 14px;
   text-align: center; }
 
+a {
+  text-decoration: none; }
+
 header {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
