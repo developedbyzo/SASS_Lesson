@@ -1,0 +1,77 @@
+//SASS TEACH YOURSELF LESSON
+
+// Tutorial Reference: Learn Sass https://www.youtube.com/watch?v=NWupx6SzHd0
+
+//GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One')
+
+//VARIABLES
+$black: #333
+$pale: #d2e1dd
+$pink: #c69
+$blue: #036
+$center-me: center
+$justify: justify
+
+//FONT VARIABLES
+$julius: 'Julius Sans One', sans-serif
+$crimson: 'Crimson Text', serif
+$font-size: 14px
+
+// MIXINS
+=circleThing($rad, $height, $width, $bg, $color)
+  -webkit-border-radius: $rad
+  -moz-border-radius:    $rad
+  -ms-border-radius:     $rad
+  border-radius:         $rad
+
+  height: $height
+  width: $width
+  line-height: $height
+  text-align: $center-me
+
+  background: $bg
+  color:      $color
+
+  margin: 0 auto
+
+//STYLES
+
+body
+  background: $pale
+  color: $black
+  font-family: $julius
+  font-size: $font-size
+  text-align: $center-me
+
+header
+  +circleThing(100%, 100px, 150px, $black, white)
+
+h1
+    font-size: $font-size + 15
+    font-family: $crimson
+
+.container
+  text-align: $justify
+
+article
+  background: white
+  width: 760px
+  margin: 0 auto
+  padding: 40px
+  box-sizing: border-box
+
+
+// FOR LATER USER:
+// $body-bg: transparent
+
+// img.bg
+//  min-height: 100%
+//  min-width: 600px
+
+//  width: 100%
+//  height: auto
+
+//  position: fixed
+//  top: 0
+//  left: 0
